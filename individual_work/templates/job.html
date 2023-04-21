@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block tittle %} Работники {% endblock %}
+{% block content %}
+<div>{{job}}</div><br>
+    {% for i in contractors %}
+        <div>{{i.name}}</div>
+    {% endfor %}
+{% endblock %}

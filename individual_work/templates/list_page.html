@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Самостоятельная работа{% endblock %}
+{% block content %}
+    Cписок работ
+    <ul>
+    {% for i in jobs %}
+        <li><a href="/individual_work/jobs/{{ i.id }}">{{i.id}}- {{ i.name }}</a></li>
+    {% endfor %}
+    </ul>
+
+    Cписок подрядчиков
+    <ul>
+    {% for i in contractors %}
+        <li>{{ i.name }}, {{i.job}}, {{i.description}}</li>
+    {% endfor %}
+    </ul>
+    Список заказчиков
+    <a href="customer-name/">Get new</a>
+    <ul>
+    {% for i in customers %}
+        <li>{{ i.name }}, {{i.phone_number}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

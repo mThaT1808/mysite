@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Пользователь: {{username}}</h2>
+    <h2>Номер карты: {{card_number}}</h2>
+    <div>RUB: {{balance.rub}} </div>
+    <div>USD: {{balance.usd}} </div>
+    <div>EUR: {{balance.eur}} </div>
+    <form method="get" action="/Zadanie_po_kursu_2/add_money/"><button type="submit"> Внести </button></form>
+    <br>
+    <form method="get" action="/Zadanie_po_kursu_2/take_money/"><button type="submit"> Снять </button></form>
+    <br>
+    <form method="get" action="/Zadanie_po_kursu_2/"><button type="submit"> Выйти </button></form>
+    <br>
+</body>
+</html>
+
+

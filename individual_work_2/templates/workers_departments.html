@@ -1,0 +1,23 @@
+{% extends 'base_2.html' %}
+{% block title %}Самостоятельная работа 2{% endblock %}
+
+{% block content %}
+
+<h2>Отделы:</h2>
+
+{% for i in departments %}
+
+    <div>{{i.id}}- {{i.name}}</div>
+    <textarea cols="50", readonly>{{i.description}}</textarea>
+    <br>
+{% endfor %}
+
+<h2>сотрудники:</h2>
+
+{% for i in workers %}
+
+    <div>Имя: {{i.name}}, Номер телефона: {{i.phone_number}}, Отдел: {{i.department}}</div>
+    <br>
+{% endfor %}
+
+{% endblock %}

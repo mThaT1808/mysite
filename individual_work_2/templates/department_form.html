@@ -1,0 +1,11 @@
+{% extends 'base_2.html' %}
+{% block tittle %} Форма отдела {% endblock %}
+{% block content%}
+
+<form  action="/individual_work_2/department_form/" method="post">
+    {% csrf_token %}
+    {{form.as_div}}
+    <button type="submit">Добавить</button>
+</form>
+
+{% endblock %}

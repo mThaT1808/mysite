@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block tittle %} Форма работа {% endblock %}
+{% block content%}
+
+<form  action="/individual_work/job_form/" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Добавить</button>
+</form>
+
+{% endblock %}

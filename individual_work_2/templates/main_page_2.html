@@ -1,0 +1,15 @@
+{% extends 'base_2.html' %}
+{% block title %}Самостоятельная работа 2{% endblock %}
+
+{% block content %}
+
+<a href="/individual_work_2/workers_departments/">Сотрудники и отделы</a>
+
+{% for i in departments %}
+
+    <div>{{i.id}}-<a href="/individual_work_2/workers_in_department/{{i.id}}">{{i.name}}</a></div>
+    <textarea cols="50", readonly>{{i.description}}</textarea>
+    <br>
+{% endfor %}
+
+{% endblock %}
